@@ -55,7 +55,7 @@ function NotFound() {
                         fontSize: '20px',
                       }}
                     >
-                      these words: "file not found."
+                      these words: &lquot;file not found.&rquot;
                     </Typography.Text>
 
                     <cite
@@ -91,7 +91,7 @@ function NotFound() {
                       fontSize: '25px',
                     }}
                   >
-                    There's nothing to see here.
+                    There&apos;s nothing to see here.
                   </Typography.Text>
                 </Col>
               </Row>

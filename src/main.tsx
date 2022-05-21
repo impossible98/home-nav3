@@ -1,5 +1,5 @@
 import '@arco-design/web-react/dist/css/arco.css';
-import React, { StrictMode, Suspense } from 'react';
+import { StrictMode, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, useRoutes } from 'react-router-dom';
 
