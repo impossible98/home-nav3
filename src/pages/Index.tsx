@@ -1,8 +1,11 @@
-export default function Index() {
+import HomeIndex from '@/components/Home/Index';
+
+function Index() {
   return (
     <>
-      <h1>Home</h1>
-      <a href='./about'>To About</a>
+      <HomeIndex />
     </>
   );
 }
+
+export default Index;
