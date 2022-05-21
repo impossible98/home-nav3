@@ -2,21 +2,21 @@ import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
 
 import Search from './Search';
 
+import { WEBSITE } from '@/utils/constants';
+
 function SearchTab() {
   return (
     <>
       <Tabs variant='soft-rounded' colorScheme='gray' isLazy>
         <TabList>
-          <Tab>Bing CN</Tab>
-          <Tab>Sogou</Tab>
+          {WEBSITE.map((tab, index) => <Tab key={index}>{tab.title}</Tab>)}
         </TabList>
         <TabPanels>
-          <TabPanel>
-            <Search />
-          </TabPanel>
-          <TabPanel>
-            <Search />
-          </TabPanel>
+          {WEBSITE.map((tab, index) => (
+            <TabPanel key={index}>
+              <Search engine={tab.engine} />
+            </TabPanel>
+          ))}
         </TabPanels>
       </Tabs>
     </>

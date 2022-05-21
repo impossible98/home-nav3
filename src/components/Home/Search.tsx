@@ -1,13 +1,15 @@
 import { Input } from '@chakra-ui/react';
 
-import { DEFAULT_ENGINE } from '@/utils/constants';
+interface SearchProps {
+  engine: string;
+}
 
-function Search() {
+function Search(props: SearchProps) {
   function search(e: any) {
     if (e.target.value === '') {
       return undefined;
     } else if (e.keyCode === 13) {
-      window.open(`${DEFAULT_ENGINE}${e.target.value}`);
+      window.open(props.engine + `${e.target.value}`);
     }
   }
   return (
