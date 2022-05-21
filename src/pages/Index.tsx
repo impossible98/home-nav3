@@ -1,7 +1,7 @@
 import { Layout } from '@arco-design/web-react';
 
+import FooterIndex from '@/components/Footer/Index';
 import HomeIndex from '@/components/Home/Index';
-
 const Sider = Layout.Sider;
 const Header = Layout.Header;
 const Footer = Layout.Footer;
@@ -28,7 +28,13 @@ function Index() {
           <Content>
             <HomeIndex />
           </Content>
-          <Footer>Footer</Footer>
+          <Footer
+            style={{
+              height: '70px',
+            }}
+          >
+            <FooterIndex />
+          </Footer>
         </Layout>
       </Layout>
     </Layout>
