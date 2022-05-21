@@ -1,4 +1,4 @@
-import { Tabs, Typography } from '@arco-design/web-react';
+import { Tabs } from '@arco-design/web-react';
 
 import { WEBSITE } from '@/utils/constants';
 import { useState } from 'react';
