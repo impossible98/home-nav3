@@ -1,8 +1,7 @@
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
 
-import Search from './Search';
-
 import { WEBSITE } from '@/utils/constants';
+import Search from './Search';
 
 function SearchTab() {
   return (
