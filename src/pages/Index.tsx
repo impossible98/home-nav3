@@ -1,13 +1,20 @@
 import { Layout } from '@arco-design/web-react';
+import { useEffect } from 'react';
 
 import FooterIndex from '@/components/Footer/Index';
 import HomeIndex from '@/components/Home/Index';
+import { TITLE } from '@/utils/constants';
+
 const Sider = Layout.Sider;
 const Header = Layout.Header;
 const Footer = Layout.Footer;
 const Content = Layout.Content;
 
 function Index() {
+  useEffect(() => {
+    document.title = `Index - ${TITLE}`;
+  });
+
   return (
     <Layout
       style={{

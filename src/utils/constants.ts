@@ -1,4 +1,5 @@
 export const DEFAULT_ENGINE = 'https://www.bing.com/search?q=';
+export const TITLE = 'Home Nav';
 
 export const WEBSITE = [
   {
