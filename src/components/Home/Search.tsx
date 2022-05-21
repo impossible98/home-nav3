@@ -13,10 +13,19 @@ function Search(props: SearchProps) {
     }
   }
   return (
-    <Input
-      focusBorderColor='pink.400'
-      onKeyDown={search}
-    />
+    <form action='.'>
+      <Input
+        focusBorderColor='pink.400'
+        type='search'
+        onKeyDown={search}
+      />
+      <Input
+        type='text'
+        sx={{
+          display: 'none',
+        }}
+      />
+    </form>
   );
 }
 
