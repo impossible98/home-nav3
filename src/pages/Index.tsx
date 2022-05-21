@@ -1,4 +1,4 @@
-import { Button, Layout, Menu, Message, Typography } from '@arco-design/web-react';
+import { Button, Layout, Menu, Typography } from '@arco-design/web-react';
 import { IconBook, IconHome } from '@arco-design/web-react/icon';
 import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
@@ -37,7 +37,10 @@ function Index() {
           height: '70px',
         }}
       >
-        <Button type='text' onClick={handleCollapsed}>
+        <Button
+          type='text'
+          onClick={handleCollapsed}
+        >
           <Icon icon='ic:baseline-menu' />
         </Button>
       </Header>
@@ -49,11 +52,10 @@ function Index() {
           trigger={null}
           breakpoint='xl'
         >
-          <div className='logo' />
+          <div />
           <Menu
             defaultOpenKeys={['1']}
             defaultSelectedKeys={['0_3']}
-            onClickMenuItem={(key) => Message.info({ content: `You select ${key}`, showIcon: true })}
             style={{ width: '100%' }}
           >
             <MenuItem key='0_1'>

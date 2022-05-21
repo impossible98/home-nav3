@@ -28,9 +28,7 @@ function Display(props: DisplayProps) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
-        minWidth: '100%',
-        width: '300px',
-        maxWidth: '300px',
+        width: '400px',
         height: '80px',
         transform: transform,
       }}
@@ -59,8 +57,24 @@ function Display(props: DisplayProps) {
             {props.title.charAt(0)}
           </Avatar>
           <Layout>
-            <Typography.Text bold>{props.title}</Typography.Text>
-            <Typography.Text type='secondary'>{props.description}</Typography.Text>
+            <Typography.Text
+              bold
+              ellipsis={{ expandable: false }}
+              style={{
+                width: '330px',
+              }}
+            >
+              {props.title}
+            </Typography.Text>
+            <Typography.Text
+              type='secondary'
+              ellipsis={{ expandable: false }}
+              style={{
+                width: '330px',
+              }}
+            >
+              {props.description}
+            </Typography.Text>
           </Layout>
         </span>
       </div>

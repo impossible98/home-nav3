@@ -2,7 +2,9 @@ function About() {
   return (
     <>
       <h1>About</h1>
-      <a href='./'>To Home</a>
+      <a href='./'>
+        To Home
+      </a>
     </>
   );
 }

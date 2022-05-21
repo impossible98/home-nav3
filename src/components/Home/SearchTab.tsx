@@ -16,7 +16,11 @@ function SearchTab() {
       onChange={setActiveTab}
     >
       {SEARCH.map((tab, index) => (
-        <TabPane destroyOnHide key={index} title={tab.title}>
+        <TabPane
+          destroyOnHide
+          key={index}
+          title={tab.title}
+        >
           <Search engine={tab.engine} />
         </TabPane>
       ))}
