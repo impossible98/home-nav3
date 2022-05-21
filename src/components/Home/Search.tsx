@@ -1,5 +1,5 @@
 import { Input } from '@arco-design/web-react';
-import { useState } from 'react';
+import { type ChangeEvent, useState } from 'react';
 
 import './Search.css';
 const InputSearch = Input.Search;
@@ -11,11 +11,11 @@ interface SearchProps {
 function Search(props: SearchProps) {
   const [input, setInput] = useState('');
 
-  function handleChange(text: string, e: any) {
+  function handleChange(text: string): void {
     setInput(text);
   }
 
-  function handlePressEnter(e: any) {
+  function handlePressEnter(e: ChangeEvent<HTMLInputElement>): void {
     if (e.target.value === '') {
       return undefined;
     }
