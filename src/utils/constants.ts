@@ -66,4 +66,11 @@ export const WEBSITE = {
       url: 'https://www.typescriptlang.org/docs/handbook/intro.html',
     },
   ],
+  tool: [
+    {
+      title: 'Mozilla Observatory',
+      description: 'Mozilla Observatory',
+      url: 'https://observatory.mozilla.org/',
+    },
+  ],
 };
