@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react';
+import '@arco-design/web-react/dist/css/arco.css';
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, useRoutes } from 'react-router-dom';
@@ -15,10 +15,8 @@ function App() {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ChakraProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ChakraProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
 );

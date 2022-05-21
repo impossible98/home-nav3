@@ -1,24 +1,26 @@
-import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react';
+import { Tabs, Typography } from '@arco-design/web-react';
 
 import { WEBSITE } from '@/utils/constants';
+import { useState } from 'react';
 import Search from './Search';
 
+const TabPane = Tabs.TabPane;
+
 function SearchTab() {
+  const [activeTab, setActiveTab] = useState('0');
+
   return (
-    <>
-      <Tabs variant='soft-rounded' colorScheme='gray' isLazy>
-        <TabList>
-          {WEBSITE.map((tab, index) => <Tab key={index}>{tab.title}</Tab>)}
-        </TabList>
-        <TabPanels>
-          {WEBSITE.map((tab, index) => (
-            <TabPanel key={index}>
-              <Search engine={tab.engine} />
-            </TabPanel>
-          ))}
-        </TabPanels>
-      </Tabs>
-    </>
+    <Tabs
+      activeTab={activeTab}
+      type='rounded'
+      onChange={setActiveTab}
+    >
+      {WEBSITE.map((tab, index) => (
+        <TabPane destroyOnHide key={index} title={tab.title}>
+          <Search engine={tab.engine} />
+        </TabPane>
+      ))}
+    </Tabs>
   );
 }
 
