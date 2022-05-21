@@ -1,4 +1,4 @@
-import { Divider, Grid } from '@arco-design/web-react';
+import { Grid } from '@arco-design/web-react';
 
 const Row = Grid.Row;
 const Col = Grid.Col;

@@ -1,5 +1,6 @@
 import { Divider, Grid } from '@arco-design/web-react';
 
+import DisplayCollection from './DisplayCollection';
 import SearchTab from './SearchTab';
 const Row = Grid.Row;
 const Col = Grid.Col;
@@ -19,7 +20,14 @@ function HomeIndex() {
         </Col>
       </Row>
 
-      <Divider />
+      <div
+        style={{
+          backgroundColor: '#F0F2F5',
+        }}
+      >
+        <Divider />
+        <DisplayCollection />
+      </div>
     </>
   );
 }

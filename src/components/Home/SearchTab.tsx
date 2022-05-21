@@ -1,6 +1,6 @@
 import { Tabs } from '@arco-design/web-react';
 
-import { WEBSITE } from '@/utils/constants';
+import { SEARCH } from '@/utils/constants';
 import { useState } from 'react';
 import Search from './Search';
 
@@ -15,7 +15,7 @@ function SearchTab() {
       type='rounded'
       onChange={setActiveTab}
     >
-      {WEBSITE.map((tab, index) => (
+      {SEARCH.map((tab, index) => (
         <TabPane destroyOnHide key={index} title={tab.title}>
           <Search engine={tab.engine} />
         </TabPane>
