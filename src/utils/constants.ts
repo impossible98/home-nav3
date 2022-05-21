@@ -50,5 +50,10 @@ export const WEBSITE = {
       description: 'Arco Design React Documentation',
       url: 'https://arco.design/react/docs/start',
     },
+    {
+      title: 'Font Awesome Documentation',
+      description: 'Font Awesome Documentation',
+      url: 'https://fontawesome.com/docs/web/use-with/react/',
+    },
   ],
 };

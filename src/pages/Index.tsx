@@ -1,6 +1,8 @@
 import { Button, Layout, Menu, Typography } from '@arco-design/web-react';
 import { IconBook, IconHome } from '@arco-design/web-react/icon';
-import { Icon } from '@iconify/react';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { useEffect, useState } from 'react';
 
 import FooterIndex from '@/components/Footer/Index';
@@ -41,7 +43,7 @@ function Index() {
           type='text'
           onClick={handleCollapsed}
         >
-          <Icon icon='ic:baseline-menu' />
+          <FontAwesomeIcon icon={faBars} />
         </Button>
       </Header>
       <Layout>
