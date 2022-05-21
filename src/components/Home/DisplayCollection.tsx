@@ -11,6 +11,7 @@ const TabPane = Tabs.TabPane;
 function DisplayCollection() {
   const common = WEBSITE.common;
   const documentation = WEBSITE.documentation;
+  const tool = WEBSITE.tool;
 
   return (
     <>
@@ -65,6 +66,41 @@ function DisplayCollection() {
         >
           <Row>
             {documentation.map((col, index) => (
+              <Col
+                key={index}
+                flex='450px'
+                style={{
+                  marginLeft: 20,
+                  marginBottom: 20,
+                }}
+              >
+                <Display
+                  title={col.title}
+                  description={col.description}
+                  url={col.url}
+                />
+              </Col>
+            ))}
+          </Row>
+        </TabPane>
+      </Tabs>
+
+      <Tabs activeTab='1'>
+        <TabPane
+          key='1'
+          title={
+            <span>
+              <IconBook
+                style={{
+                  marginRight: 6,
+                }}
+              />
+              Tool
+            </span>
+          }
+        >
+          <Row>
+            {tool.map((col, index) => (
               <Col
                 key={index}
                 flex='450px'

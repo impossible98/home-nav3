@@ -69,7 +69,7 @@ export const WEBSITE = {
   tool: [
     {
       title: 'Mozilla Observatory',
-      description: 'Mozilla Observatory',
+      description: 'The Mozilla Observatory is a project designed to help developers, system administrators, and security professionals configure their sites safely and securely.',
       url: 'https://observatory.mozilla.org/',
     },
   ],
