@@ -6,7 +6,11 @@ const Col = Grid.Col;
 function FooterIndex() {
   return (
     <>
-      <Divider />
+      <Row justify='center'>
+        <Col span={20}>
+          Footer
+        </Col>
+      </Row>
     </>
   );
 }

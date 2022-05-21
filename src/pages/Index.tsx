@@ -17,6 +17,7 @@ function Index() {
     >
       <Header
         style={{
+          borderBottom: '1px solid #e8e8e8',
           height: '70px',
         }}
       >
@@ -30,6 +31,7 @@ function Index() {
           </Content>
           <Footer
             style={{
+              borderTop: '1px solid #e8e8e8',
               height: '70px',
             }}
           >
