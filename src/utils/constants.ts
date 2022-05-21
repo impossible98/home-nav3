@@ -43,7 +43,7 @@ export const WEBSITE = {
     {
       title: 'Vite Documentation',
       description: 'Language Server Protocol Documentation',
-      url: 'https://vite-documentation.onrender.com/',
+      url: 'https://vitejs.dev/guide/',
     },
     {
       title: 'Arco Design React Documentation',
@@ -54,6 +54,16 @@ export const WEBSITE = {
       title: 'Font Awesome Documentation',
       description: 'Font Awesome Documentation',
       url: 'https://fontawesome.com/docs/web/use-with/react/',
+    },
+    {
+      title: 'React Documentation',
+      description: 'React Documentation',
+      url: 'https://reactjs.org/docs/getting-started.html',
+    },
+    {
+      title: 'TypeScript Documentation',
+      description: 'TypeScript Documentation',
+      url: 'https://www.typescriptlang.org/docs/handbook/intro.html',
     },
   ],
 };
