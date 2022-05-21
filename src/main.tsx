@@ -1,5 +1,5 @@
 import '@arco-design/web-react/dist/css/arco.css';
-import React, { Suspense } from 'react';
+import React, { StrictMode, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, useRoutes } from 'react-router-dom';
 
@@ -16,10 +16,10 @@ function App() {
 const rootElement = document.getElementById('root');
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
-    <React.StrictMode>
+    <StrictMode>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </React.StrictMode>,
+    </StrictMode>,
   );
 }
