@@ -9,6 +9,9 @@ node_modules/
 !.vscode/extensions.json
 .idea
 
+# ESLint
+.eslintcache
+
 # Logs
 logs
 *.log

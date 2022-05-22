@@ -1,4 +1,12 @@
-import { Button, Card, Grid, Layout, Typography } from '@arco-design/web-react';
+import { Button, Card, Grid, Layout, List, Typography } from '@arco-design/web-react';
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import { useEffect, useState } from 'react';
+import userAgent from 'ua-parser-js';
+
+import { ip } from '@/api/main';
+import { TITLE } from '@/utils/constants';
+dayjs.extend(customParseFormat);
 
 const Header = Layout.Header;
 const Footer = Layout.Footer;
@@ -8,14 +16,29 @@ const Col = Grid.Col;
 const Meta = Card.Meta;
 
 function NotFound() {
+  const [now, setNow] = useState(dayjs());
+
+  useEffect(() => {
+    document.title = `404 - ${TITLE}`;
+
+    const time = setInterval(() => {
+      setNow(dayjs());
+    }, 1000);
+
+    return () => {
+      clearTimeout(time);
+    };
+  });
+
   return (
     <Layout style={{ height: '400px' }}>
       <Header
         style={{
-          height: '50px',
+          background: '#F7F8FA',
+          borderBottom: '1px solid #e8e8e8',
+          height: '70px',
         }}
       >
-        Header
       </Header>
       <Content
         style={{
@@ -27,6 +50,7 @@ function NotFound() {
           <Col>
             <Card
               style={{
+                marginTop: '20px',
                 background: '#DED7C4',
                 borderRadius: '15px',
                 boxShadow: '0px 0px 10px #e3e3e3',
@@ -55,7 +79,7 @@ function NotFound() {
                         fontSize: '20px',
                       }}
                     >
-                      these words: &lquot;file not found.&rquot;
+                      these words: &quot;file not found.&quot;
                     </Typography.Text>
 
                     <cite
@@ -123,8 +147,53 @@ function NotFound() {
             </Layout>
           </Col>
         </Row>
+
+        <Row
+          style={{
+            marginTop: '20px',
+          }}
+        >
+          <Col>
+            <Layout>
+              <Typography.Text
+                style={{
+                  fontSize: '20px',
+                  marginBottom: '20px',
+                }}
+              >
+                Now: {now.format('YYYY-MM-DD HH:mm:ss')}
+              </Typography.Text>
+              <List
+                style={{
+                  width: '400px',
+                }}
+                header='User-Agent'
+                dataSource={[
+                  userAgent(window.navigator.userAgent).os.name,
+                  userAgent(window.navigator.userAgent).os.version,
+                  userAgent(window.navigator.userAgent).browser.name,
+                  userAgent(window.navigator.userAgent).browser.version,
+                  JSON.stringify(userAgent(window.navigator.userAgent), null, '  '),
+                ]}
+                render={(item, index) => (
+                  <List.Item
+                    key={index}
+                  >
+                    {item}
+                  </List.Item>
+                )}
+              />
+            </Layout>
+          </Col>
+        </Row>
       </Content>
-      <Footer>Footer</Footer>
+      <Footer
+        style={{
+          borderTop: '1px solid #e8e8e8',
+          height: '70px',
+        }}
+      >
+      </Footer>
     </Layout>
   );
 }
