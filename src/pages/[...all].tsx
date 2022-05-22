@@ -4,7 +4,6 @@ import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { useEffect, useState } from 'react';
 import userAgent from 'ua-parser-js';
 
-import { ip } from '@/api/main';
 import { TITLE } from '@/utils/constants';
 dayjs.extend(customParseFormat);
 
