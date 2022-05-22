@@ -87,7 +87,7 @@ function Index() {
                 droplist={
                   <Menu>
                     <MenuItem key='1'>English - English</MenuItem>
-                    <MenuItem key='2'>简体中文 - Chinese (Simplified)</MenuItem>
+                    <MenuItem key='2'>Chinese (Simplified) - 简体中文</MenuItem>
                   </Menu>
                 }
                 position='bl'

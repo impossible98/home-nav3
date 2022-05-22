@@ -33,7 +33,14 @@ function App() {
 }
 
 const rootElement = document.getElementById('root');
-if (rootElement) {
+
+if (rootElement && import.meta.env.MODE === 'development') {
+  ReactDOM.createRoot(rootElement).render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+  );
+} else if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <StrictMode>
       <BrowserRouter>
