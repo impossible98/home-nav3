@@ -6,6 +6,7 @@ import { StrictMode, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, useRoutes } from 'react-router-dom';
 
+import '@/utils/i18n';
 import useStorage from '@/utils/useStorage';
 import routes from '~react-pages';
 

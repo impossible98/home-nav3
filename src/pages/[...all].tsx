@@ -2,9 +2,11 @@ import { Button, Card, Grid, Layout, List, Typography } from '@arco-design/web-r
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import userAgent from 'ua-parser-js';
 
 import { TITLE } from '@/utils/constants';
+
 dayjs.extend(customParseFormat);
 
 const Header = Layout.Header;
@@ -15,6 +17,8 @@ const Col = Grid.Col;
 const Meta = Card.Meta;
 
 function NotFound() {
+  const { t, i18n } = useTranslation();
+
   const [now, setNow] = useState(dayjs());
 
   useEffect(() => {
@@ -114,7 +118,7 @@ function NotFound() {
                       fontSize: '25px',
                     }}
                   >
-                    There&apos;s nothing to see here.
+                    {t("There's nothing to see here.")}
                   </Typography.Text>
                 </Col>
               </Row>

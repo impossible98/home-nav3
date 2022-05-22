@@ -1,6 +1,7 @@
-import { Button, Grid, Layout, Menu, Switch, Typography } from '@arco-design/web-react';
+import { Button, Dropdown, Grid, Layout, Menu, Space, Switch, Typography } from '@arco-design/web-react';
 import { IconBook, IconHome } from '@arco-design/web-react/icon';
-import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faLanguage, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useEffect, useState } from 'react';
@@ -16,6 +17,7 @@ const Content = Layout.Content;
 const MenuItem = Menu.Item;
 const Row = Grid.Row;
 const Col = Grid.Col;
+
 function Index() {
   const [collapsed, setCollapsed] = useState(false);
 
@@ -50,7 +52,7 @@ function Index() {
         style={{
           background: '#F7F8FA',
           borderBottom: '1px solid #e8e8e8',
-          height: '70px',
+          height: '65px',
         }}
       >
         <Row align='center' justify='center'>
@@ -74,11 +76,26 @@ function Index() {
           <Col
             span={8}
           >
-            <Switch
-              checkedText={<FontAwesomeIcon icon={faSun} />}
-              uncheckedText={<FontAwesomeIcon icon={faMoon} />}
-              onChange={handleChange}
-            />
+            <Space>
+              <Switch
+                checkedText={<FontAwesomeIcon icon={faSun} />}
+                uncheckedText={<FontAwesomeIcon icon={faMoon} />}
+                onChange={handleChange}
+              />
+              <Dropdown
+                droplist={
+                  <Menu>
+                    <MenuItem key='1'>English - English</MenuItem>
+                    <MenuItem key='2'>简体中文 - Chinese (Simplified)</MenuItem>
+                  </Menu>
+                }
+                position='bl'
+              >
+                <Button type='text'>
+                  <FontAwesomeIcon icon={faLanguage} color='#000000' size='2x' />
+                </Button>
+              </Dropdown>
+            </Space>
           </Col>
         </Row>
       </Header>

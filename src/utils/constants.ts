@@ -65,6 +65,11 @@ export const WEBSITE = {
       description: 'TypeScript Documentation',
       url: 'https://www.typescriptlang.org/docs/handbook/intro.html',
     },
+    {
+      title: 'MDN Web Docs',
+      description: 'MDN Web Docs',
+      url: 'https://developer.mozilla.org/en-US/',
+    },
   ],
   tool: [
     {
