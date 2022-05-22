@@ -14,7 +14,7 @@ const getDefaultStorage = (key: string) => {
 function useStorage(
   key: string,
   defaultValue?: string,
-): [string, (string: any) => void, () => void] {
+): [string, (str: string) => void, () => void] {
   const [storedValue, setStoredValue] = useState(
     getDefaultStorage(key) || defaultValue || '',
   );
