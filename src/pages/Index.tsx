@@ -127,7 +127,7 @@ function Index() {
                         marginLeft: '10px',
                       }}
                     >
-                      {item.title}
+                      {item.title.charAt(0).toUpperCase() + item.title.slice(1)}
                     </Typography.Text>
                   </Space>
                 }
