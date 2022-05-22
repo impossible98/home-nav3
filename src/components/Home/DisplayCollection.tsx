@@ -35,6 +35,7 @@ function DisplayCollection() {
                   title={col.title}
                   description={col.description}
                   url={col.url}
+                  color={col.color}
                 />
               </Col>
             ))}
@@ -65,6 +66,7 @@ function DisplayCollection() {
                   title={col.title}
                   description={col.description}
                   url={col.url}
+                  color={col.color}
                 />
               </Col>
             ))}
@@ -95,6 +97,7 @@ function DisplayCollection() {
                   title={col.title}
                   description={col.description}
                   url={col.url}
+                  color={col.color}
                 />
               </Col>
             ))}
@@ -125,6 +128,7 @@ function DisplayCollection() {
                   title={col.title}
                   description={col.description}
                   url={col.url}
+                  color={col.color}
                 />
               </Col>
             ))}

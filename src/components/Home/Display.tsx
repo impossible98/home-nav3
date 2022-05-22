@@ -5,6 +5,7 @@ interface DisplayProps {
   title: string;
   description: string;
   url: string;
+  color?: string;
 }
 
 function Display(props: DisplayProps) {
@@ -51,10 +52,10 @@ function Display(props: DisplayProps) {
             size={40}
             style={{
               marginRight: 12,
-              backgroundColor: '#165DFF',
+              backgroundColor: props.color,
             }}
           >
-            {props.title.charAt(0)}
+            {props.title.charAt(0).toUpperCase()}
           </Avatar>
           <Layout>
             <Typography.Text

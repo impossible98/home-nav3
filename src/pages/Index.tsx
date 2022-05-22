@@ -1,22 +1,11 @@
 import { Button, Dropdown, Grid, Layout, Menu, Space, Switch, Typography } from '@arco-design/web-react';
-import {
-  faBars,
-  faBook,
-  faHouse,
-  faLanguage,
-  faMoon,
-  faScrewdriverWrench,
-  faSun,
-  faVideo,
-} from '@fortawesome/free-solid-svg-icons';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useEffect, useState } from 'react';
 
 import FooterIndex from '@/components/Footer/Index';
 import HomeIndex from '@/components/Home/Index';
-import { catalogue, test, TITLE } from '@/utils/constants';
+import { catalogue, TITLE } from '@/utils/constants';
 
 const Sider = Layout.Sider;
 const Header = Layout.Header;
@@ -71,7 +60,7 @@ function Index() {
               type='text'
               onClick={handleCollapsed}
             >
-              <FontAwesomeIcon icon={faBars} />
+              <FontAwesomeIcon icon='fa-solid fa-bars' />
             </Button>
           </Col>
           <Col
@@ -86,8 +75,8 @@ function Index() {
           >
             <Space>
               <Switch
-                checkedText={<FontAwesomeIcon icon={faSun} />}
-                uncheckedText={<FontAwesomeIcon icon={faMoon} />}
+                checkedText={<FontAwesomeIcon icon='fa-solid fa-sun' />}
+                uncheckedText={<FontAwesomeIcon icon='fa-solid fa-moon' />}
                 onChange={handleChange}
               />
               <Dropdown
@@ -100,7 +89,11 @@ function Index() {
                 position='bl'
               >
                 <Button type='text'>
-                  <FontAwesomeIcon icon={faLanguage} color='#000000' size='2x' />
+                  <FontAwesomeIcon
+                    icon='fa-solid fa-language'
+                    color='#000000'
+                    size='2x'
+                  />
                 </Button>
               </Dropdown>
             </Space>
@@ -121,13 +114,13 @@ function Index() {
             defaultSelectedKeys={['0_3']}
             style={{ width: '100%' }}
           >
-            {test.catalogue.map((item, index) => (
+            {catalogue.catalogue.map((item, index) => (
               <MenuItem
                 key={index.toString()}
               >
                 {
                   <Space>
-                    {item.icon && <FontAwesomeIcon icon={faHouse} />}
+                    {item.icon && <FontAwesomeIcon icon={item.icon} />}
                     <Typography.Text
                       bold
                       style={{

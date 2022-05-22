@@ -1,4 +1,4 @@
-import { Divider, Grid } from '@arco-design/web-react';
+import { Grid } from '@arco-design/web-react';
 
 import DisplayCollection from './DisplayCollection';
 import SearchTab from './SearchTab';
