@@ -87,3 +87,31 @@ export const WEBSITE = {
     },
   ],
 };
+
+export const catalogue = [
+  'common',
+  'documentation',
+  'tool',
+  'video',
+];
+
+export const test = {
+  catalogue: [
+    {
+      title: 'common',
+      icon: 'faHouse',
+    },
+    {
+      title: 'documentation',
+      icon: 'faBook',
+    },
+    {
+      title: 'tool',
+      icon: 'faScrewdriverWrench',
+    },
+    {
+      title: 'video',
+      icon: 'faVideo',
+    },
+  ],
+};

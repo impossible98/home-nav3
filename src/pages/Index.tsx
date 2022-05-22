@@ -1,6 +1,14 @@
 import { Button, Dropdown, Grid, Layout, Menu, Space, Switch, Typography } from '@arco-design/web-react';
-import { IconBook, IconHome } from '@arco-design/web-react/icon';
-import { faBars, faLanguage, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faBook,
+  faHouse,
+  faLanguage,
+  faMoon,
+  faScrewdriverWrench,
+  faSun,
+  faVideo,
+} from '@fortawesome/free-solid-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -8,7 +16,7 @@ import { useEffect, useState } from 'react';
 
 import FooterIndex from '@/components/Footer/Index';
 import HomeIndex from '@/components/Home/Index';
-import { TITLE } from '@/utils/constants';
+import { catalogue, test, TITLE } from '@/utils/constants';
 
 const Sider = Layout.Sider;
 const Header = Layout.Header;
@@ -113,18 +121,25 @@ function Index() {
             defaultSelectedKeys={['0_3']}
             style={{ width: '100%' }}
           >
-            <MenuItem key='0_1'>
-              <IconHome />
-              <Typography.Text>
-                Common
-              </Typography.Text>
-            </MenuItem>
-            <MenuItem key='0_2'>
-              <IconBook />
-              <Typography.Text>
-                Documentation
-              </Typography.Text>
-            </MenuItem>
+            {test.catalogue.map((item, index) => (
+              <MenuItem
+                key={index.toString()}
+              >
+                {
+                  <Space>
+                    {item.icon && <FontAwesomeIcon icon={faHouse} />}
+                    <Typography.Text
+                      bold
+                      style={{
+                        marginLeft: '10px',
+                      }}
+                    >
+                      {item.title}
+                    </Typography.Text>
+                  </Space>
+                }
+              </MenuItem>
+            ))}
           </Menu>
         </Sider>
         <Layout>

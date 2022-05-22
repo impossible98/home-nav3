@@ -25,7 +25,6 @@ function HomeIndex() {
           backgroundColor: '#F0F2F5',
         }}
       >
-        <Divider />
         <DisplayCollection />
       </div>
     </>
