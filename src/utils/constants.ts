@@ -1,3 +1,5 @@
+import { faBook, faHouse, faScrewdriverWrench, faVideo, type IconDefinition } from '@fortawesome/free-solid-svg-icons';
+
 export const DEFAULT_ENGINE = 'https://www.bing.com/search?q=';
 export const TITLE = 'Home Nav';
 
@@ -9,6 +11,10 @@ export const SEARCH = [
   {
     title: 'Sogou',
     engine: 'https://www.sogou.com/web?query=',
+  },
+  {
+    title: 'Github',
+    engine: 'https://github.com/search?q=',
   },
   {
     title: 'npm',
@@ -100,23 +106,21 @@ export const WEBSITE = {
   ],
 };
 
-export const catalogue = {
-  catalogue: [
-    {
-      title: 'common',
-      icon: 'fa-solid fa-house',
-    },
-    {
-      title: 'documentation',
-      icon: 'fa-solid fa-book',
-    },
-    {
-      title: 'tool',
-      icon: 'fa-solid fa-screwdriver-wrench',
-    },
-    {
-      title: 'video',
-      icon: 'fa-solid fa-video',
-    },
-  ],
-};
+export const CATALOGUE = [
+  {
+    title: 'common',
+    icon: faHouse,
+  },
+  {
+    title: 'documentation',
+    icon: faBook,
+  },
+  {
+    title: 'tool',
+    icon: faScrewdriverWrench,
+  },
+  {
+    title: 'video',
+    icon: faVideo,
+  },
+];

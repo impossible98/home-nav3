@@ -1,11 +1,11 @@
 import { Button, Dropdown, Grid, Layout, Menu, Space, Switch, Typography } from '@arco-design/web-react';
+import { faBars, faLanguage, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { useEffect, useState } from 'react';
 
 import FooterIndex from '@/components/Footer/Index';
 import HomeIndex from '@/components/Home/Index';
-import { catalogue, TITLE } from '@/utils/constants';
+import { CATALOGUE, TITLE } from '@/utils/constants';
 
 const Sider = Layout.Sider;
 const Header = Layout.Header;
@@ -60,7 +60,7 @@ function Index() {
               type='text'
               onClick={handleCollapsed}
             >
-              <FontAwesomeIcon icon='fa-solid fa-bars' />
+              <FontAwesomeIcon icon={faBars} />
             </Button>
           </Col>
           <Col
@@ -75,8 +75,8 @@ function Index() {
           >
             <Space>
               <Switch
-                checkedText={<FontAwesomeIcon icon='fa-solid fa-sun' />}
-                uncheckedText={<FontAwesomeIcon icon='fa-solid fa-moon' />}
+                checkedText={<FontAwesomeIcon icon={faSun} />}
+                uncheckedText={<FontAwesomeIcon icon={faMoon} />}
                 onChange={handleChange}
               />
               <Dropdown
@@ -90,7 +90,7 @@ function Index() {
               >
                 <Button type='text'>
                   <FontAwesomeIcon
-                    icon='fa-solid fa-language'
+                    icon={faLanguage}
                     color='#000000'
                     size='2x'
                   />
@@ -114,12 +114,13 @@ function Index() {
             defaultSelectedKeys={['0_3']}
             style={{ width: '100%' }}
           >
-            {catalogue.catalogue.map((item, index) => (
+            {CATALOGUE.map((item, index) => (
               <MenuItem
                 key={index.toString()}
               >
                 {
                   <Space>
+                    <FontAwesomeIcon icon={faSun} />
                     {item.icon && <FontAwesomeIcon icon={item.icon} />}
                     <Typography.Text
                       bold
