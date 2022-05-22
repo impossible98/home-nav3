@@ -1,6 +1,5 @@
 // https://stackoverflow.com/questions/68424114/next-js-how-to-fetch-localstorage-data-before-client-side-rendering
 // 解决 nextJS 无法获取初始localstorage问题
-
 import { isSSR } from '@/utils/is';
 import { useEffect, useState } from 'react';
 
@@ -17,7 +16,7 @@ function useStorage(
   defaultValue?: string,
 ): [string, (string: any) => void, () => void] {
   const [storedValue, setStoredValue] = useState(
-    getDefaultStorage(key) || defaultValue,
+    getDefaultStorage(key) || defaultValue || '',
   );
 
   const setStorageValue = (value: string) => {
@@ -40,8 +39,10 @@ function useStorage(
 
     if (storageValue) {
       setStoredValue(storageValue);
+    } else if (defaultValue) {
+      setStorageValue(defaultValue);
     } else {
-      setStoredValue(defaultValue);
+      setStorageValue('');
     }
   }, []);
 
