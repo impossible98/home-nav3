@@ -47,7 +47,7 @@ export const WEBSITE = {
     {
       title: 'Yarn Documentation',
       description: 'Language Server Protocol Documentation',
-      url: 'https://yarn-documentation.onrender.com/',
+      url: 'https://yarn-documentation.deno.dev/',
       color: '#255DF9',
     },
     {
