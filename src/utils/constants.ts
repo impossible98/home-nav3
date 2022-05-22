@@ -1,4 +1,4 @@
-import { faBook, faHouse, faScrewdriverWrench, faVideo, type IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faHouse, faScrewdriverWrench, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 export const DEFAULT_ENGINE = 'https://www.bing.com/search?q=';
 export const TITLE = 'Home Nav';
@@ -101,6 +101,12 @@ export const WEBSITE = {
         "This is NOT a comprehensive list of ALL Unicode characters, it's a list of HTML symbols with their numbers and names that are more relevant to developers, engineers and designers.",
       url: 'https://www.htmlsymbols.xyz/',
       color: '#1D3F93',
+    },
+    {
+      title: 'Measure page quality',
+      description:
+        'Test your pages in a lab environment powered by PageSpeed Insights. Then get tips and recommendations to improve your user experience. For field performance, see the [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) tool.',
+      url: 'https://web.dev/measure/',
     },
   ],
   video: [

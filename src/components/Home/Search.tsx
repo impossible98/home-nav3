@@ -2,6 +2,7 @@ import { Input } from '@arco-design/web-react';
 import { type ChangeEvent, useState } from 'react';
 
 import './Search.css';
+
 const InputSearch = Input.Search;
 
 interface SearchProps {
