@@ -79,4 +79,11 @@ export const WEBSITE = {
       url: 'https://observatory.mozilla.org/',
     },
   ],
+  video: [
+    {
+      title: 'TMDB',
+      description: 'The Movie Database (TMDB) is a popular, user editable database for movies and TV shows.',
+      url: 'https://www.themoviedb.org/',
+    },
+  ],
 };
