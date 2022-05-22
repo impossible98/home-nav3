@@ -95,6 +95,13 @@ export const WEBSITE = {
       url: 'https://observatory.mozilla.org/',
       color: '#313131',
     },
+    {
+      title: 'HTML Symbols',
+      description:
+        "This is NOT a comprehensive list of ALL Unicode characters, it's a list of HTML symbols with their numbers and names that are more relevant to developers, engineers and designers.",
+      url: 'https://www.htmlsymbols.xyz/',
+      color: '#1D3F93',
+    },
   ],
   video: [
     {

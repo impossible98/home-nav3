@@ -7,18 +7,27 @@ import Pages from 'vite-plugin-pages';
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    // rollupOptions: {
-    //   output: {
-    //     manualChunks(id: string) {
-    //       if (id.includes('node_modules')) {
-    //         return id.toString().split('node_modules/')[1].split('/')[0].toString();
-    //       }
-    //     },
-    //   },
-    // },
+    rollupOptions: {
+      output: {
+        manualChunks(id: string) {
+          if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+          }
+        },
+      },
+    },
   },
   plugins: [
-    Pages(),
+    Pages({
+      importMode(filepath, options) {
+        for (const page of options.dirs) {
+          if (page.baseRoute === '' && filepath.startsWith(`/${page.dir}/index`)) {
+            return 'sync';
+          }
+        }
+        return 'async';
+      },
+    }),
     react(),
   ],
   resolve: {

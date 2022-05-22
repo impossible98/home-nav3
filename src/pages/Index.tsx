@@ -21,7 +21,11 @@ function Index() {
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    document.title = `Index - ${TITLE}`;
+    if (import.meta.env.MODE === 'development') {
+      document.title = `\u{274C} Developing...`;
+    } else {
+      document.title = `Index - ${TITLE}`;
+    }
   });
 
   function handleCollapsed() {
@@ -120,7 +124,6 @@ function Index() {
               >
                 {
                   <Space>
-                    <FontAwesomeIcon icon={faSun} />
                     {item.icon && <FontAwesomeIcon icon={item.icon} />}
                     <Typography.Text
                       bold
